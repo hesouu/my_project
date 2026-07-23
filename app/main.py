@@ -2,7 +2,7 @@
 # 1. 모듈 가져오기
 from fastapi import FastAPI, Request
 from fastapi.templating import Jinja2Templates
-from fastapi.staticfiles import StaticFiles
+from fastapi.staticfiles import StaticFiles # 정적 데이터 처리 모듈
 
 # 2. Fastapi 객체 생성, 전역변수 생성
 app = FastAPI()
@@ -17,7 +17,6 @@ def home(req:Request):
     # -> 응답 (return) -> 클라이언트 브라우저에게 전달 -> 랜더링, Dom tree
     # -> 브라우저 해석 화면에 그리기 -> 클라이언트는 응답결과를 화면에서 볼수있다
     return templates.TemplateResponse(req, "index.html")
-
 
 @app.get("/auth/login")
 def login(req:Request):
