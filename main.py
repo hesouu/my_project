@@ -7,7 +7,7 @@ from fastapi.staticfiles import StaticFiles
 # 2. Fastapi 객체 생성, 전역변수 생성
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
-app.mount("/static", StaticFiles(directory="staticFiles"), name="static") # 정적데이터 경로설정
+app.mount("/static", StaticFiles(directory="static"), name="static") # 정적데이터 경로설정
 
 # 3. 라우팅 구성/정의
 @app.get("/")
