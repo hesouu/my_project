@@ -22,14 +22,11 @@
 
 # 구조
 my_project/
-│
-├── main.py
-├── templates/          <-- html 위치
-│   └── index.html
-└── static/             <-- 정적 데이터 위치:css,js,리소스
-    └── assets
-    │   └── *.jpg|png
-    └── css
-    │   └── *.css
-    └── js
-        └──  *.js
+
+# docker 기반 ci/cd 조정
+- docker-compose.yml 조정
+    - app, proxy 파트 이미지를 hub쪽으로 조정, 볼륨 제거
+- 명령어
+    - docerk-compose down
+    - docker-compose up -d
+        - --build 제거함
