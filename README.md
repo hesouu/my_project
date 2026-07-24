@@ -24,6 +24,7 @@
 my_project/
 
 # docker 기반 ci/cd 조정
+- 탄련적 IP 사용 권장 (고정으로)
 - docker-compose.yml 조정
     - app, proxy 파트 이미지를 hub쪽으로 조정, 볼륨 제거
 - 명령어
